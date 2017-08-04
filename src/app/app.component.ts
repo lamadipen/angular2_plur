@@ -1,9 +1,21 @@
 import { Component } from '@angular/core';
 
+import { ProductListComponent } from './products/product-list.component'
+
 @Component({
     selector: 'pm-app',
     template: `
-        <h1>Angular2: Getting Started</h1>
+        <div>
+            <h1>{{ pageTitle }}</h1>
+        </div>
+        <div>
+            This is the first page
+        </div> 
+         <pm-products></pm-products>   
     `
+    
+    
 })
-export class AppComponent { }
+export class AppComponent { 
+    pageTitle: string = "Acme Product Management";
+}
