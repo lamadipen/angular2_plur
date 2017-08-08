@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { IProduct } from './product';
+import { StarComponent } from '../shared/star.component';
 @Component({
     selector: 'pm-products',
     templateUrl:'app/products/product-list.component.html',
@@ -44,6 +45,10 @@ export class ProductListComponent implements OnInit{
 
     ngOnInit():void{
         console.log("Inside hooks lifecycle called ngOnInit");
+    }
+
+    onRatingClicked(message: string):void{
+        this.pageTitle = 'Product List: ' +message; 
     }
 }
 
